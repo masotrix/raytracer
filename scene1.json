@@ -1,0 +1,53 @@
+{
+    "__type__": "scene",
+    "camera": {
+        "__type__": "camera",
+        "fov": 45.0,
+        "position": [0,20,20],
+        "up": [0,1,0],
+        "target": [0,0,0]
+    },
+    "objects": [
+        {
+            "__type__": "mesh",
+			"file_path": "bunny_med.obj",
+            "materials": ["yellow_lambert", "white_bph_1000"],
+			"translation" : [-5,0,0],
+			"scaling": [0.5,0.5,0.5],
+			"rotation": [0,90,0]
+		
+        },
+		{
+            "__type__": "mesh",
+			"file_path": "bunny_med.obj",
+            "materials": ["green_lambert", "white_bph_1000"],
+			"translation" : [5,0,0],
+			"scaling": [0.5,0.5,0.5],
+			"rotation": [0,-90,0]
+        },
+		{
+		  "__type__": "mesh",
+		  "file_path": "large_plane.obj",
+		  "materials": [ "white_lambert" ]
+		}
+    ],
+    "lights": [
+	   {
+          "__type__": "point_light",
+          "position": [0, 10, 20],
+          "color": [0.5, 0.5, 0.5]
+        },
+		{
+          "__type__": "directional_light",
+          "direction": [0, -1, 0],
+          "color": [0.3, 0.3, 0.3]
+        },
+        {
+          "__type__": "ambient_light",
+          "color": [0.2, 0.2, 0.2]
+        }
+    ],
+    "params": {
+        "background_color": [0.4,0.4,0.4]
+    }
+}

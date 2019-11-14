@@ -1,0 +1,69 @@
+{
+  "__type__": "scene",
+  "camera": {
+    "__type__": "camera",
+    "fov": 45.0,
+    "position": [ 0, 0, 4 ],
+    "up": [ 0, 1, 0 ],
+    "target": [ 0, 0, 0 ]
+  },
+  "objects": [
+    {
+      "__type__": "sphere",
+      "radius": 100,
+      "position": [ 0.0, 0.0, -101 ],
+      "materials": [ "white_lambert" ]
+    },
+    {
+      "__type__": "sphere",
+      "radius": 100,
+      "position": [ 101.0, 0.0, 0.0 ],
+      "materials": [ "green_lambert" ]
+    },
+    {
+      "__type__": "sphere",
+      "radius": 100,
+      "position": [ -101.0, 0.0, 0.0 ],
+      "materials": [ "red_lambert"]
+    },
+    {
+      "__type__": "sphere",
+      "radius": 100,
+      "position": [ 0.0, 101.0, 0.0 ],
+      "materials": [ "white_lambert" ]
+    },
+    {
+      "__type__": "sphere",
+      "radius": 100,
+      "position": [ 0.0, -101.0, 0.0 ],
+      "materials": [ "white_lambert" ]
+    },
+    {
+      "__type__": "sphere",
+      "radius": 0.4,
+      "position": [ 0.5, -0.55, 0.6 ],
+      "materials": [ "air" ]
+    },
+    {
+      "__type__": "sphere",
+      "radius": 0.4,
+      "position": [ -0.5, -0.55, 0.4 ],
+      "materials": [ "blue_lambert", "white_bph_1000", "air" ]
+    }
+  ],
+  "lights": [
+    {
+      "__type__": "point_light",
+      "position": [ 0.0, 0.9, 0.5 ],
+      "color": [ 0.5, 0.5, 0.5 ]
+    },
+    {
+      "__type__": "ambient_light",
+      "color": [ 0.2, 0.2, 0.2 ]
+    }
+  ],
+  "params": {
+    "background_color": [ 0.0, 0.0, 0.0 ],
+	"refraction_index": 1.025
+  }
+}

@@ -1,0 +1,23 @@
+{
+    "__type__": "scene",
+    "camera": {
+        "__type__": "camera",
+        "fov": 45.0,
+        "position": [0,0,10],
+        "up": [0,1,0],
+        "target": [0,0,0]
+    },
+    "objects": [
+        {
+            "__type__": "sphere",
+            "radius": 1,
+            "position": [0,0,0],
+            "materials": []
+        }
+    ],
+    "lights": [
+    ],
+    "params": {
+        "background_color": [1,1,1]
+    }
+}

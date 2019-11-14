@@ -1,0 +1,31 @@
+{
+    "__type__": "scene",
+    "camera": {
+        "__type__": "camera",
+        "fov": 45.0,
+        "position": [0,10,10],
+        "up": [0,1,0],
+        "target": [0,0,0]
+    },
+    "objects": [
+        {
+            "__type__": "mesh",
+			"file_path": "large_plane.obj",
+            "materials": ["bricks_lambert_nn"]
+        }
+    ],
+    "lights": [
+	   {
+          "__type__": "point_light",
+          "position": [0, 0, 20],
+          "color": [1.0, 1.0, 1.0]
+        },
+        {
+          "__type__": "ambient_light",
+          "color": [0.5, 0.5, 0.5]
+        }
+    ],
+    "params": {
+        "background_color": [0.1,0.1,0.1]
+    }
+}
