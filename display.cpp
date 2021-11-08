@@ -1,6 +1,5 @@
-#define png_infopp_NULL (png_infopp)NULL 
-#define int_p_NULL (int *)NULL
-#include <boost/gil/extension/io/png_dynamic_io.hpp>
+#include <boost/gil.hpp>
+#include <boost/gil/extension/io/png.hpp>
 #include <display.h>
 using namespace std;
 using namespace boost;
@@ -13,5 +12,5 @@ void write_image(string img_name,
       (gil::rgb8_pixel_t*) img,
       width*3*sizeof(unsigned char));
 
-  gil::png_write_view(img_name,im);
+  gil::write_view(img_name, im, gil::png_tag());
 }

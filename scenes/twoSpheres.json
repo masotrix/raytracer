@@ -1,0 +1,36 @@
+{
+  "__type__": "scene",
+  "camera": {
+    "__type__": "camera",
+    "fov": 45.0,
+    "position": [0,5,5],
+    "up": [0,0,1],
+    "target": [0,0,0]
+  },
+  "objects": [
+    {
+      "__type__": "sphere",
+      "radius": 100,
+      "position": [0, 0, -100],
+      "materials": ["white_lambert"]
+    },
+    {
+      "__type__": "sphere",
+      "radius": 0.2,
+      "position": [0, 0, 1],
+      "materials": ["green_lambert", "white_bph_100"]
+    }
+  ],
+  "lights": [
+   {
+      "__type__": "point_light",
+      "position": [0, 0, 1.5],
+      "color": [0.5, 0.5, 0.5]
+    },
+    {
+      "__type__": "ambient_light",
+      "color": [0.2, 0.2, 0.2]
+    }
+  ],
+  "params": { "background_color": [0.1,0.1,0.1] }
+}

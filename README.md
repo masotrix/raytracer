@@ -1,11 +1,14 @@
 # CudaRayTracer
 
-This project requires CUDA 9.1 and C++ 11
+## Requirements
+- CUDA 9.1+
+- C++ 14+
+- BOOST 1.77.0+
+- BOOST GIL 1.68+
 
 ## Compile
 At the root:
 `make`
 
 ## Run
-`run -s <scene>`
-where <scene> must be one of the .json files at root directory
+`run -s scenes/<sceneX.json> # Outupt image.png`

@@ -1,32 +1,28 @@
-CC1= nvcc
-CC2= g++
+CC= nvcc
 #CFLAGS1= -gencode arch=compute_35,code=sm_35 -std=c++11
 #CFLAGS1+= -g -I. -lGLEW -lGL -lglfw -G
-CFLAGS1= -arch=sm_35 -std=c++11 -lpng
-CFLAGS1+= -g -I. -G #--ptxas-options=-v
-CFLAGS2= -std=c++14 -g -I.
+CFLAGS= -arch=sm_52 -std=c++14 -lpng
+CFLAGS+= -g -I. -G #--ptxas-options=-v
+CCPP= g++
+CPPFLAGS= -std=c++14 -lpng -g -I.
+
+SRC= $(wildcard *.cu)
+OBJ= $(patsubst %.cu, %.o, $(SRC)) display.o
 
 # Link
 
 all: run
 
-run: main.o display.o parsing.o model.o
-	$(CC1) $^ -o $@ $(CFLAGS1)
+run: $(OBJ)
+	$(CC) $^ -o $@ $(CFLAGS)
 
 # Compile
 
-display.o: display.cpp display.h
-	$(CC2) $< -c -o $@ $(CFLAGS2)
+%.o: %.cu %.cuh
+	$(CC) $< -dc -o $@ $(CFLAGS)
 
-parsing.o: parsing.cpp parsing.h model.h
-	$(CC2) $< -c -o $@ $(CFLAGS2)
-
-model.o: model.cu model.h display.h
-	$(CC1) $< -dc -o $@ $(CFLAGS1)
-
-main.o: main.cu parsing.h display.h model.h
-	$(CC1) $< -dc -o $@ $(CFLAGS1)
-
+%.o: %.cpp %.h
+	$(CCPP) $< -c -o $@ $(CPPFLAGS)
 
 # Clean
 

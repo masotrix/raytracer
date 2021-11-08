@@ -1,0 +1,58 @@
+{
+  "__type__": "scene",
+  "camera": {
+    "__type__": "camera",
+    "fov": 45.0,
+    "position": [0,20,20],
+    "up": [0,1,0],
+    "target": [0,0,0]
+  },
+  "objects": [
+    {
+      "__type__": "mesh",
+      "file_path": "meshes/dragon.obj",
+      "materials": ["red_lambert", "white_bph_1000"],
+      "scaling": [3,3,3],
+      "rotation": [-90,0,0],
+      "translation": [5,3,5]
+    },
+    {
+      "__type__": "mesh",
+      "file_path": "meshes/teapot.obj",
+      "materials": ["blue_lambert"],
+      "scaling": [1.5,1.5,1.5],
+      "rotation": [0,0,0],
+      "translation": [-5,0,5]
+    },
+    {
+      "__type__": "mesh",
+      "file_path": "meshes/bunny_high.obj",
+      "materials": ["green_lambert", "white_bph_10"],
+      "scaling": [0.5,0.5,0.5],
+      "rotation": [0,0,0],
+      "translation": [0,0,-5]
+    },
+    {
+      "__type__": "mesh",
+      "file_path": "meshes/large_plane.obj",
+      "materials": [ "white_mirror", "gray_lambert" ]
+    }
+  ],
+  "lights": [
+    {
+      "__type__": "point_light",
+      "position": [0, 10, 20],
+      "color": [0.5, 0.5, 0.5]
+    },
+    {
+      "__type__": "directional_light",
+      "direction": [0, -1, 0],
+      "color": [0.3, 0.3, 0.3]
+    },
+    {
+      "__type__": "ambient_light",
+      "color": [0.2, 0.2, 0.2]
+    }
+  ],
+  "params": { "background_color": [0.4,0.4,0.4] }
+}
