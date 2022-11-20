@@ -1,5 +1,8 @@
 *.o
 *.swp
+*.swo
 Tests/
 run
+Exec
 report
+build/

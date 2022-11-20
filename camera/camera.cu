@@ -1,7 +1,6 @@
 #include <camera.cuh>
 #include <ray.cuh>
 #include <vector.cuh>
-#include <ray.cuh>
 #include <model.cuh>
 using namespace std;
 

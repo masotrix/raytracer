@@ -1,7 +1,7 @@
 #include <lights.cuh>
-#include <vector.cuh>
 #include <model.cuh>
 #include <camera.cuh>
+#include <vector.cuh>
 #include <object.cuh>
 #include <ray.cuh>
 #include <material.cuh>
